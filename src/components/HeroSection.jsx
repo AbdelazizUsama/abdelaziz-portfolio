@@ -105,7 +105,7 @@ export default function HeroSection({ lang, onExploreProjects, onOpenContact }) 
               
               <div className="rounded-2xl bg-[#191C1F] p-2 border border-[#30363B] shadow-lg overflow-hidden">
                 <img
-                  src="/abdelaziz-portfolio/assets/profile.jpg"
+                  src="/assets/profile.jpg"
                   alt={content.name}
                   className="w-full h-[260px] sm:h-[300px] object-cover rounded-xl transition-transform duration-500 group-hover:scale-103"
                 />
