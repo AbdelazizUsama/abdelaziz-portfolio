@@ -1,0 +1,85 @@
+name: Deploy portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Safety net: these files contain customers' names/addresses or confidential business data.
+      # Everything in public/ is published, and a public repo exposes it forever (git history),
+      # so stop here instead of publishing them. (Keep them on your own computer only.)
+      - name: Block private data from being published
+        run: |
+          blocked=$(git ls-files | grep -i -E 'MISUO.*\.xlsx|Overall[ _]Dashboard[ _]Sales[ _]Analysis.*\.xlsx|PRIVATE_backup|(^|/)\.env' || true)
+          if [ -n "$blocked" ]; then
+            echo "::error title=Private files found in the repository::Remove these files from the repo (and add them to .gitignore):"
+            echo "$blocked"
+            exit 1
+          fi
+          echo "No private files tracked."
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # Catches broken links before they go live: every file the page links to must exist in the build.
+      - name: Verify build output
+        run: |
+          missing=0
+          for f in index.html \
+                   assets/Abdelaziz_Resume.pdf assets/Database.xlsx assets/Production_Order_Visual_Report.xlsx \
+                   assets/profile.jpg assets/dashboard_steam.jpg assets/dashboard_cost.jpg \
+                   assets/dashboard_misuo.jpg assets/dashboard_logistics.png; do
+            if [ ! -f "dist/$f" ]; then
+              echo "::error title=Missing file in build::dist/$f (add it to public/$f)"
+              missing=1
+            fi
+          done
+          # root-relative references (src="/..." or href="/...") break on https://USER.github.io/REPO/
+          if grep -E '(src|href)="/[^/]' dist/index.html; then
+            echo "::error title=Absolute paths in index.html::Use relative paths (vite.config.js must have base: './')"
+            missing=1
+          fi
+          [ "$missing" -eq 0 ] && echo "Build output OK."
+          exit $missing
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4
