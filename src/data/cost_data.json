@@ -1,0 +1,272 @@
+{
+  "summary": {
+    "capacity_production": 465165,
+    "variance_quantity": 3657,
+    "high_order_companies_count": 19,
+    "role": "محاسب ومحلل بيانات مبتدئ",
+    "person_name": "عبدالعزيز اسامه محمود",
+    "units_produced": 465165,
+    "units_required": 468822,
+    "order_lines": 418,
+    "companies_count": 19,
+    "period_start": "2026-08-01",
+    "period_end": "2026-08-31"
+  },
+  "top_variance_products": [
+    {
+      "name": "جل كريم سنيور بالبانثينول الشكل القديم 250 جم",
+      "variance": 804
+    },
+    {
+      "name": "جل شفاف سنيور 250 جم (Senor mega hard styling gel)",
+      "variance": 798
+    },
+    {
+      "name": "سنيور كريم زبدة شيا 225 جم",
+      "variance": 438
+    },
+    {
+      "name": "سنيور كريم لتصفيف الشعر بزيت الجرجير , 200 مل",
+      "variance": 400
+    },
+    {
+      "name": "هير كريم ليفين زبده شيا 150 جرام * 48 قطعة",
+      "variance": 312
+    },
+    {
+      "name": "سنيور كريم للشعر بزيت الأرجان وجوز الهند وزبدة الشيا 250 جم ( كريم بامب)",
+      "variance": 310
+    },
+    {
+      "name": "جل أسود سنيور 250 جم (Senor mega hard styling gel)",
+      "variance": 272
+    },
+    {
+      "name": "جل أخضر سنيور 250 جم (Senor mega hard styling gel)",
+      "variance": 216
+    },
+    {
+      "name": "جل أصفر سنيور 250 جم (Senor mega hard styling gel)",
+      "variance": 72
+    },
+    {
+      "name": "Nexo Baby & Kids Body Wash, Xaintalyia 150ml",
+      "variance": 29
+    }
+  ],
+  "top_sales_products": [
+    {
+      "name": "هير واكس أسود , 100 جم(Honey wax&Vitamin E) ,سنيور",
+      "sales": 86384,
+      "produced": 86384
+    },
+    {
+      "name": "سنيور كريم زبدة شيا 225 جم",
+      "sales": 59558,
+      "produced": 59558
+    },
+    {
+      "name": "جل شفاف سنيور 250 جم (Senor mega hard styling gel)",
+      "sales": 28290,
+      "produced": 28290
+    },
+    {
+      "name": "سنيور كريم لتصفيف الشعر بزيت الجرجير , 200 مل",
+      "sales": 23226,
+      "produced": 23226
+    },
+    {
+      "name": "سنيور كريم جل225 جم",
+      "sales": 22788,
+      "produced": 22788
+    },
+    {
+      "name": "جل أسود سنيور 250 جم (Senor mega hard styling gel)",
+      "sales": 21592,
+      "produced": 21592
+    },
+    {
+      "name": "سنيور هارد هير واكس(أحمر) , 100 جم (Rock Wax)",
+      "sales": 18882,
+      "produced": 18882
+    },
+    {
+      "name": "سنيور كريم للشعر بزيت الأرجان وجوز الهند وزبدة الشيا 250 جم ( كريم بامب)",
+      "sales": 18294,
+      "produced": 18294
+    },
+    {
+      "name": "سنيور كريم لتصفيف الشعر بعسل النحل الطبيعي, 200 مل",
+      "sales": 17804,
+      "produced": 17804
+    },
+    {
+      "name": "هيرلايف جل 275 مل * 24 قطعة",
+      "sales": 16798,
+      "produced": 16798
+    }
+  ],
+  "company_production_orders": [
+    {
+      "company": "Senor",
+      "orders": 141
+    },
+    {
+      "company": "Leven",
+      "orders": 98
+    },
+    {
+      "company": "Skintune",
+      "orders": 84
+    },
+    {
+      "company": "Wide Wave",
+      "orders": 24
+    },
+    {
+      "company": "Black Gold",
+      "orders": 18
+    },
+    {
+      "company": "Duxgen",
+      "orders": 10
+    },
+    {
+      "company": "Siwa",
+      "orders": 7
+    },
+    {
+      "company": "Purex",
+      "orders": 6
+    },
+    {
+      "company": "Sofico",
+      "orders": 6
+    },
+    {
+      "company": "Sirbest",
+      "orders": 5
+    }
+  ],
+  "top_produced_products": [
+    {
+      "name": "هير واكس أسود , 100 جم(Honey wax&Vitamin E) ,سنيور",
+      "produced": 86384
+    },
+    {
+      "name": "سنيور كريم زبدة شيا 225 جم",
+      "produced": 59558
+    },
+    {
+      "name": "جل شفاف سنيور 250 جم (Senor mega hard styling gel)",
+      "produced": 28290
+    },
+    {
+      "name": "سنيور كريم لتصفيف الشعر بزيت الجرجير , 200 مل",
+      "produced": 23226
+    },
+    {
+      "name": "سنيور كريم جل225 جم",
+      "produced": 22788
+    },
+    {
+      "name": "جل أسود سنيور 250 جم (Senor mega hard styling gel)",
+      "produced": 21592
+    },
+    {
+      "name": "سنيور هارد هير واكس(أحمر) , 100 جم (Rock Wax)",
+      "produced": 18882
+    },
+    {
+      "name": "سنيور كريم للشعر بزيت الأرجان وجوز الهند وزبدة الشيا 250 جم ( كريم بامب)",
+      "produced": 18294
+    },
+    {
+      "name": "سنيور كريم لتصفيف الشعر بعسل النحل الطبيعي, 200 مل",
+      "produced": 17804
+    },
+    {
+      "name": "هيرلايف جل 275 مل * 24 قطعة",
+      "produced": 16798
+    }
+  ],
+  "company_orders": [
+    {
+      "company": "Senor",
+      "orders": 141
+    },
+    {
+      "company": "Leven",
+      "orders": 98
+    },
+    {
+      "company": "Skintune",
+      "orders": 84
+    },
+    {
+      "company": "Wide Wave",
+      "orders": 24
+    },
+    {
+      "company": "Black Gold",
+      "orders": 18
+    },
+    {
+      "company": "Duxgen",
+      "orders": 10
+    },
+    {
+      "company": "Siwa",
+      "orders": 7
+    },
+    {
+      "company": "Purex",
+      "orders": 6
+    },
+    {
+      "company": "Sofico",
+      "orders": 6
+    },
+    {
+      "company": "Sirbest",
+      "orders": 5
+    },
+    {
+      "company": "Bless",
+      "orders": 3
+    },
+    {
+      "company": "Sofia",
+      "orders": 3
+    },
+    {
+      "company": "Xaintalyia",
+      "orders": 3
+    },
+    {
+      "company": "Foretvital",
+      "orders": 2
+    },
+    {
+      "company": "Nuya",
+      "orders": 2
+    },
+    {
+      "company": "Pharmamart",
+      "orders": 2
+    },
+    {
+      "company": "Privea",
+      "orders": 2
+    },
+    {
+      "company": "Armana Pharma",
+      "orders": 1
+    },
+    {
+      "company": "Avento",
+      "orders": 1
+    }
+  ],
+  "_notes": "From Production_Order_Visual_Report.xlsx, sheet Aug, 1-31 Aug 2026. 'capacity_production' = total Quantity Produced (UNITS). 'top_sales_products[].sales' = units produced, NOT revenue (kept under the old key so existing components still work; prefer top_produced_products). Variance = required - produced. 'orders' = production-order lines (418), 19 companies."
+}

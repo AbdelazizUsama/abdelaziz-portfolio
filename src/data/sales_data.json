@@ -1,0 +1,72 @@
+{
+  "summary": {
+    "total": 12509078.33,
+    "net": 10877459.46,
+    "tax": 1631618.86,
+    "tax_rate": 15,
+    "invoice_lines": 2129,
+    "invoices": 1634,
+    "customers": 781,
+    "period_start": "2026-01-01",
+    "period_end": "2026-10-31",
+    "top_customer_share": 96.5,
+    "top3_customer_share": 97.5
+  },
+  "by_month": [
+    750310.04,
+    2508189.4,
+    1126060.51,
+    927655.9,
+    1585951.34,
+    1635312.09,
+    1502944.59,
+    1203916.63,
+    738048.47,
+    530689.35
+  ],
+  "by_customer_group": [
+    {
+      "name": "عملاء اللوجيستي",
+      "total": 12071025.17
+    },
+    {
+      "name": "عملاء التصنيع الخارجي",
+      "total": 198733.79
+    },
+    {
+      "name": "عملاء فرع القطيف",
+      "total": 182444.12
+    },
+    {
+      "name": "عملاء فرع عنك",
+      "total": 34348.67
+    },
+    {
+      "name": "عملاء التصنيع",
+      "total": 13892.95
+    },
+    {
+      "name": "تجاري",
+      "total": 4553.42
+    },
+    {
+      "name": "عملاء فرع الدوحه",
+      "total": 4080.2
+    }
+  ],
+  "by_region": [
+    {
+      "name": "المنطقة الوسطي",
+      "total": 12071025.17
+    },
+    {
+      "name": "الدمام - الخبر",
+      "total": 433499.73
+    },
+    {
+      "name": "المنطقة الغربية",
+      "total": 4553.42
+    }
+  ],
+  "_notes": "From Overall_Dashboard_Sales_Analysis_2026.xlsx (sheet Query Report), 1 Jan - 31 Oct 2026. 'total' = invoice total INCLUDING 15% tax (net + tax). Currency is not stated in the file. No customer names are stored here on purpose (confidential). by_month = Jan..Oct."
+}

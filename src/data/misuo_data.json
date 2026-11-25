@@ -1,0 +1,106 @@
+{
+  "summary": {
+    "total_sales_egp": 1292886,
+    "total_orders": 152,
+    "avg_selling_price_egp": 10261,
+    "top_city": "القاهرة",
+    "top_product": "سرير",
+    "top_color": "أبيض",
+    "delivered_percentage": 81,
+    "canceled_refused_percentage": 18,
+    "on_time_delivery_rate": 4,
+    "order_lines": 126,
+    "items_sold": 152,
+    "order_date_start": "2024-07-27",
+    "order_date_end": "2024-12-14"
+  },
+  "sales_by_platform": [
+    {
+      "platform": "هومزمارت",
+      "units": 94
+    },
+    {
+      "platform": "اوسكار ريتن",
+      "units": 19
+    },
+    {
+      "platform": "شيك هومز",
+      "units": 16
+    },
+    {
+      "platform": "تاكى",
+      "units": 13
+    },
+    {
+      "platform": "السويس",
+      "units": 4
+    },
+    {
+      "platform": "فيسبوك",
+      "units": 3
+    },
+    {
+      "platform": "منزلى",
+      "units": 2
+    },
+    {
+      "platform": "كيمت",
+      "units": 1
+    }
+  ],
+  "orders_by_area": [
+    {
+      "city": "القاهرة",
+      "orders": 60
+    },
+    {
+      "city": "الجيزة",
+      "orders": 24
+    },
+    {
+      "city": "القليوبية",
+      "orders": 11
+    },
+    {
+      "city": "السويس",
+      "orders": 8
+    },
+    {
+      "city": "الإسكندرية",
+      "orders": 5
+    },
+    {
+      "city": "البحر الأحمر",
+      "orders": 3
+    },
+    {
+      "city": "مطروح",
+      "orders": 2
+    },
+    {
+      "city": "أسيوط",
+      "orders": 1
+    }
+  ],
+  "delivery_breakdown": [
+    {
+      "status": "تم التسليم",
+      "percentage": 81,
+      "lines": 102,
+      "color": "#10B981"
+    },
+    {
+      "status": "مرتجع",
+      "percentage": 1,
+      "lines": 1,
+      "color": "#F59E0B"
+    },
+    {
+      "status": "مرفوض",
+      "percentage": 18,
+      "lines": 23,
+      "color": "#EF4444"
+    }
+  ],
+  "_notes": "From MISUO_Abdelaziz_Usama_Mahmoud.xlsx (sheet البيانات), orders 27 Jul - 14 Dec 2024. 'total_orders' (152) is the SUM OF QUANTITY (items sold) across 126 order lines; delivery % = share of order lines. avg_selling_price = mean price per order line (1,292,886/126). 'on_time_delivery_rate' (4%) only counts deliveries with a zero day-difference, so it understates on-time delivery: do not present it as an SLA rate. 'status' مرفوض means rejected. The old sales_by_platform labels were shifted; fixed."
+}
