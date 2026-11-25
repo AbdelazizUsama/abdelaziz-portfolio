@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  actions: read
   contents: read
   pages: write
   id-token: write
@@ -26,9 +27,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Safety net: these files contain customers' names/addresses or confidential business data.
-      # Everything in public/ is published, and a public repo exposes it forever (git history),
-      # so stop here instead of publishing them. (Keep them on your own computer only.)
+      # Block customer or confidential business data from being published.
       - name: Block private data from being published
         run: |
           blocked=$(git ls-files | grep -i -E 'MISUO.*\.xlsx|Overall[ _]Dashboard[ _]Sales[ _]Analysis.*\.xlsx|PRIVATE_backup|(^|/)\.env' || true)
@@ -51,7 +50,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      # Catches broken links before they go live: every file the page links to must exist in the build.
+      # Verify that required public files were copied into the production build.
       - name: Verify build output
         run: |
           missing=0
@@ -64,9 +63,9 @@ jobs:
               missing=1
             fi
           done
-          # root-relative references (src="/..." or href="/...") break on https://USER.github.io/REPO/
+          # Catch root-relative references that break on a repository Pages URL.
           if grep -E '(src|href)="/[^/]' dist/index.html; then
-            echo "::error title=Absolute paths in index.html::Use relative paths (vite.config.js must have base: './')"
+            echo "::error title=Absolute paths in index.html::Use relative paths (vite.config.js should use base: './')"
             missing=1
           fi
           [ "$missing" -eq 0 ] && echo "Build output OK."
@@ -79,7 +78,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: dist
+          name: github-pages
 
       - name: Deploy site
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
